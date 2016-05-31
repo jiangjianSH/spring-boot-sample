@@ -1,5 +1,6 @@
 package com.jiangjian.study.spring;
 
+import com.jiangjian.study.spring.support.sourcemanagement.Author;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
@@ -25,6 +26,15 @@ import org.springframework.web.bind.annotation.RestController;
  * 如果你不想通过注解的方式来配置，你还可以通过spring.autoconfigure.exclude系统参数来
  * 配置，建议使用注解的形式
  */
+@Author(
+        author = "jiangjian",
+        date = "2016/5/31",
+        currentRevision = "1",
+        lastModified = "2016/5/31",
+        lastModifiedBy = "jiangjian",
+        reviewers = {"jianjian"}
+
+)
 @EnableAutoConfiguration
 @ComponentScan
 @Configuration
