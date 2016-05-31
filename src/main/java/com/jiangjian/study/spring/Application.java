@@ -6,6 +6,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * @ComponentScan在Root Package可以扫描整个工程中的@Component的类，包括
@@ -24,9 +25,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * 如果你不想通过注解的方式来配置，你还可以通过spring.autoconfigure.exclude系统参数来
  * 配置，建议使用注解的形式
  */
-@Configuration
 @EnableAutoConfiguration
 @ComponentScan
+@Configuration
+@RestController
 public class Application {
 
     @RequestMapping("/")
