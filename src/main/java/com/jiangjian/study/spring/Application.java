@@ -1,6 +1,7 @@
 package com.jiangjian.study.spring;
 
 import com.jiangjian.study.spring.support.sourcemanagement.Author;
+import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
@@ -48,6 +49,12 @@ public class Application {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class);
+        //System.setProperty("spring.devtools.restart.enabled", "true");//如果彻底不想使用spring boot devtools情况下使用
+        SpringApplication app = new SpringApplication(Application.class);
+
+        //你可以禁用掉Spring boot 启动过程的标志
+        //app.setBannerMode(Banner.Mode.OFF);
+
+        app.run(args);
     }
 }
