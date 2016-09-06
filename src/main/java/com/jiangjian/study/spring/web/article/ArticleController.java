@@ -9,9 +9,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ArticleController {
 
     @RequestMapping("/")
-    @ResponseBody
     public String index() {
-        return "1xxts is article index page changed";
+        return "index";
     }
 
     @RequestMapping("/about")
