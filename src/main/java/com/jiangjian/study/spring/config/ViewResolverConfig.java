@@ -14,6 +14,8 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 public class ViewResolverConfig extends WebMvcConfigurerAdapter {
     /**
      *当前的配置其实没有什么必要，Spring Boot的默认的就是这样.这里只不过留个占位符，以后需要要jsp文件的位置
+     * Note:关于Spring设置jsp为View Resolver的限制:
+     * http://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-developing-web-applications.html#boot-features-jsp-limitations
      * @return
      */
     @Bean
