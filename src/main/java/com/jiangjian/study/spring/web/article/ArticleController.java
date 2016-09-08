@@ -10,9 +10,14 @@ public class ArticleController {
 
     @RequestMapping("/")
     public String index() {
-        return "index";
+        return "article/index";
     }
 
+    @RequestMapping("/detail")
+    @ResponseBody
+    public String detail() {
+        return "detail";
+    }
     @RequestMapping("/about")
     @ResponseBody
     public String about() {
