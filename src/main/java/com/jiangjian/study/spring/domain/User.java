@@ -1,11 +1,31 @@
-package com.jiangjian.study.spring.model;
+package com.jiangjian.study.spring.domain;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
+@Entity
+@Table
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
+    private long id;
+
+    @Column(length = 50)
     private String name;
+
+    @Column
     private int age;
+
+    @Column(length = 200)
     private String address;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;

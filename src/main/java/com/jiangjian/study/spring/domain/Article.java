@@ -1,23 +1,44 @@
-package com.jiangjian.study.spring.model;
+package com.jiangjian.study.spring.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
-/**
- * Created by jiangjian on 16-9-7.
- */
 @Entity
+@Table
 public class Article {
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column
+    private long id;
+
+    @Column
     private String title;
+
+    @Column
     private String author;
+
+    @Column
     private Date  createDate;
+
+    @Column
     private Date lastUpdateDate;
+
+    @Column
     private String category;
+
+    @Column
     private String content;
+
+    @Column
     private int viewTimes;
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
 
     public String getTitle() {
         return title;

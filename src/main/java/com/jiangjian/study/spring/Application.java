@@ -45,7 +45,7 @@ public class Application {
     @RequestMapping("/")
     @ResponseBody
     public String index() {
-        return "indexssssss";
+        return "index";
     }
 
     public static void main(String[] args) {
