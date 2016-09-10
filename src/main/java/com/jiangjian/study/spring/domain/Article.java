@@ -4,7 +4,6 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table
 public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

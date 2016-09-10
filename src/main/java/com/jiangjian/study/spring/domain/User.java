@@ -3,7 +3,6 @@ package com.jiangjian.study.spring.domain;
 import javax.persistence.*;
 
 @Entity
-@Table
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
