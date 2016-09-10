@@ -1,4 +1,4 @@
-package com.jiangjian.study.spring.web.expense;
+package com.jiangjian.study.spring.domain;
 
 public enum ExpanseType {
     FOOD("食物"),
@@ -12,5 +12,9 @@ public enum ExpanseType {
 
     ExpanseType(String description) {
         this.description = description;
+    }
+
+    public String getDescription() {
+        return description;
     }
 }
